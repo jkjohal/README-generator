@@ -1,4 +1,4 @@
-# README Generator Starter
+# README Generator
 
 <img width="497" alt="image" src="https://user-images.githubusercontent.com/112898278/226428594-1028f9a6-cebc-4a50-b0fb-80c0aab009dd.png">
 
