@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function createLicenseBadge(license) {
   if (license !== 'None') {
     return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
@@ -9,7 +9,7 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
+function createLicenseLink(license) {
   if (license !== 'None') {
     return `\n* [License](#license)\n`;
   }
@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function createLicenseSection(license) {
   if (license !== 'None') {
     return `## License
 
@@ -28,9 +28,9 @@ This project is licensed under the ${license} license.`;
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function createMarkdown(data) {
   return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
+  ${createLicenseBadge(data.license)}
 
   ## Description
   
@@ -41,16 +41,16 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   
   * [Usage](#usage)
-  ${renderLicenseLink(data.license)}
-  * [Contributing](#contributing)
+  ${createLicenseLink(data.license)}
+  * [Contributions](#contributions)
   
   * [Tests](#tests)
   
-  * [Questions](#questions)
+  * [Contact](#contact)
   
   ## Installation
   
-  To install necessary dependencies, run the following command:
+  Run the following command to install dependencies for this project:
   
   \`\`\`
   ${data.installation}
@@ -60,28 +60,28 @@ function generateMarkdown(data) {
   
   ${data.usage}
   
-  ${renderLicenseSection(data.license)}
+  ${createLicenseSection(data.license)}
     
-  ## Contributing
+  ## Contributions
   
   ${data.contributing}
   
   ## Tests
   
-  To run tests, run the following command:
+  Run the following command to run tests for this project:
   
   \`\`\`
   ${data.test}
   \`\`\`
   
-  ## Questions
+  ## Contact
   
-  If you have any questions about the repo, open an issue or contact me directly at ${
+  For any questions about the repo or any other inquiries, you can contact me at ${
       data.email
-    }. You can find more of my work at [${data.github}](https://github.com/${
+    }. You can also find me on Github: [${data.github}](https://github.com/${
       data.github
     }/).
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = createMarkdown;
