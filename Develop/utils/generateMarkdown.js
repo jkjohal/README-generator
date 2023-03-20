@@ -11,7 +11,7 @@ function createLicenseBadge(license) {
 // If there is no license, return an empty string
 function createLicenseLink(license) {
   if (license !== 'None') {
-    return `\n* [License](#license)\n`;
+    return `\n * [License](#license)\n`;
   }
   return '';
 }
@@ -41,7 +41,8 @@ function createMarkdown(data) {
   * [Installation](#installation)
   
   * [Usage](#usage)
-  ${createLicenseLink(data.license)}
+   ${createLicenseLink(data.license)}
+
   * [Contributions](#contributions)
   
   * [Tests](#tests)
